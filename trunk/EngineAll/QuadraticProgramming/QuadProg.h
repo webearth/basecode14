@@ -87,9 +87,9 @@ double solve_quadprog(Matrix<double>& G, Vector<double>& g0,
                       const Matrix<double>& CI, const Vector<double>& ci0, 
                       Vector<double>& x);
 
-double Solve(const ::DenseMatrix& G, const ::Vector<double>& g0, 
-                      const ::DenseMatrix& CE, const ::Vector<double>& ce0,  
-                      const ::DenseMatrix& CI, const ::Vector<double>& ci0, 
+double Solve(const ::DenseMatrix<double>& G, const ::Vector<double>& g0, 
+                      const ::DenseMatrix<double>& CE, const ::Vector<double>& ce0,  
+                      const ::DenseMatrix<double>& CI, const ::Vector<double>& ci0, 
                       ::Vector<double>& x);
 }
 

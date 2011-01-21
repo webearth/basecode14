@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 DirectX implementation of BaseTexture.  See BaseTexture.h for a definiton of the base functions.
 */
+#pragma  once
 
 #ifdef USE_D3D9
 class D3D9Texture : public BaseTexture

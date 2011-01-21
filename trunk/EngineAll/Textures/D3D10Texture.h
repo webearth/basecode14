@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D implementation of BaseTexture.  See BaseTexture.h for a definiton of the base functions.
 */
+#pragma  once
 
 #ifdef USE_D3D10
 class D3D10Texture : public BaseTexture

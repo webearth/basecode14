@@ -6,6 +6,7 @@ Mesh is a standard C++ array instance of the BaseMesh class.  It's the only kind
 but it will run fine under DirectX as well (if not as quickly as a D3DMesh.)  Mesh gets all of its
 functionality from BaseMesh and has no features not defined by BaseMesh.  None of the functions here are very suprising.
 */
+#include "..\\..\\Main.h"
 
 void Mesh::Render() const
 {

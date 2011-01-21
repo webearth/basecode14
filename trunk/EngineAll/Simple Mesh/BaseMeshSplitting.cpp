@@ -10,6 +10,8 @@ Because there are so many associated functions, they are grouped into various fi
 
 BaseMeshSplitting.cpp contains all the Split and PerfectSplit functions.
 */
+#include "..\\..\\Main.h"
+#include "..\\Graphics Objects\\MeshVertex.h"
 
 struct SplitVMapper {
     unsigned char Side;
@@ -460,7 +462,7 @@ void BaseMesh::PerfectSplit(float (*PositionFunction) (Vec3f &), BaseMesh &M1, B
                 if(s < 0.0f) s = 0.0f;
                 if(s > 1.0f) s = 1.0f;
 
-                Interpolate(Vtx1, Vtx2, MiddleVtx, s);
+                MeshVertex::Interpolate(Vtx1, Vtx2, MiddleVtx, s);
 
                 LocalTriangleM1[3+i2] = NV1.Length();
                 NV1.PushEnd(MiddleVtx);

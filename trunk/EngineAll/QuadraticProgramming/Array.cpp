@@ -16,6 +16,7 @@
 // along with QuadProg++. If not, see <http://www.gnu.org/licenses/>.
 
 //#include "Array.hh"
+#include "..\\..\\Main.h"
 
 namespace QuadraticProgramming
 {

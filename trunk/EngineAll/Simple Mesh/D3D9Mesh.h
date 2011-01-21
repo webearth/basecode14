@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D9Mesh is a D3D 9.0 instance of the BaseMesh class.
 */
+#pragma  once
 
 #ifdef USE_D3D9
 

@@ -10,6 +10,7 @@ Because there are so many associated functions, they are grouped into various fi
 
 BaseMeshShapes.cpp contains all the shape generation functions.
 */
+#include "..\\..\\Main.h"
 
 #define XXX .525731112119133606f
 #define ZZZ .850650808352039932f    //constants for icosahedron data

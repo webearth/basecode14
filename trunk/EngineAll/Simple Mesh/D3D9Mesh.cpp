@@ -6,6 +6,7 @@ D3D9Mesh is a DirectX instance of the BaseMesh class.
 In general all these functions just call DirectX equivalents.
 Most of the functionality is gained through the BaseMesh functions.
 */
+#include "..\\..\\Main.h"
 
 #ifdef USE_D3D9
 

@@ -851,7 +851,7 @@ class Matrix
 {
 public:
   Matrix(); // Default constructor
-  Matrix(const ::DenseMatrix &M);
+  Matrix(const ::DenseMatrix<T> &M);
   Matrix(const unsigned int n, const unsigned int m); // Construct a n x m matrix
   Matrix(const T& a, const unsigned int n, const unsigned int m); // Initialize the content to constant a
   Matrix(MType t, const T& a, const T& o, const unsigned int n, const unsigned int m);
@@ -1001,7 +1001,7 @@ Matrix<T>::Matrix(MType t, const Vector<T>& a, const T& o, unsigned int n, unsig
 //unsigned int n; // number of rows
 //unsigned int m; // number of columns
 template <typename T>
-Matrix<T>::Matrix(const ::DenseMatrix &M)
+Matrix<T>::Matrix(const ::DenseMatrix<T> &M)
     : v(new T*[M.RowCount()])
 {
     n = M.RowCount();
