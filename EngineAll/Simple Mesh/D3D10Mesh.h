@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D10Mesh is a DirectX 10 instance of the BaseMesh class.
 */
+#pragma  once
 
 #ifdef USE_D3D10
 

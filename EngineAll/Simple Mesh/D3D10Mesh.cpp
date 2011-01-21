@@ -6,6 +6,7 @@ D3D10Mesh is a D3D 10 instance of the BaseMesh class.
 In general all these functions just call DirectX equivalents.
 Most of the functionality is gained through the BaseMesh functions.
 */
+#include "..\\..\\Main.h"
 
 #ifdef USE_D3D10
 

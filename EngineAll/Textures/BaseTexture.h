@@ -8,6 +8,7 @@ BaseTexture is an abstract class that defines base-level texture functionality.
 //
 // Supported texture types
 //
+#pragma  once
 enum TextureType
 {
     TextureD3D9,

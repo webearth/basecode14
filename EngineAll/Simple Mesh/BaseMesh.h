@@ -6,7 +6,7 @@ BaseMesh is an abstract mesh class that defines basic mesh functionality.  It al
 of the manipulation (shape generation, file loading, etc.) that is possible under this generic structure.
 Each mesh must be associated with a graphics device before most operations can be performed.
 */
-
+#pragma  once
 //
 // a single face in the mesh
 //

@@ -10,6 +10,7 @@ Because there are so many associated functions, they are grouped into various fi
 
 BaseMeshIndexing.cpp contains the WeldVertices, UnIndex, and TwoPatch functions.
 */
+#include "..\\..\\Main.h"
 
 //MeshTwoPatchEdge stores the index of the two vertices that define an edge
 struct MeshTwoPatchEdge {
@@ -92,7 +93,7 @@ void BaseMesh::TwoPatch()
                 LocalTIndices[3+i2] = VertexIndex;    //if it is we just choose the found index as our entry in LocalTIndices.  No need to add another vertex to the mesh; it's already there
             } else 
             {
-                Interpolate(V[EdgeVtx1],V[EdgeVtx2],NewVertex,0.5f);    //otherwise make a new vertex at the middle of the edge,
+                MeshVertex::Interpolate(V[EdgeVtx1],V[EdgeVtx2],NewVertex,0.5f);    //otherwise make a new vertex at the middle of the edge,
                 NewEdge.v2 = EdgeVtx2;
                 NewEdge.v1 = NewVertices.Length();
                 LocalTIndices[3+i2] = NewVertices.Length();        //this new vertex is our LocalTIndices entry

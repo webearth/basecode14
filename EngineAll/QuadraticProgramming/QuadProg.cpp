@@ -27,6 +27,8 @@ File $Id: QuadProg++.cc 232 2007-06-21 12:29:00Z digasper $
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  
  */
+#include "..\\..\\Main.h"
+#include "QuadProg.h"
 
 namespace QuadraticProgramming
 {
@@ -36,9 +38,9 @@ namespace QuadraticProgramming
 #include <sstream>
 #include <stdexcept>
 
-double Solve(const ::DenseMatrix& G, const ::Vector<double>& g0, 
-    const ::DenseMatrix& CE, const ::Vector<double>& ce0,  
-    const ::DenseMatrix& CI, const ::Vector<double>& ci0, 
+double Solve(const ::DenseMatrix<double>& G, const ::Vector<double>& g0, 
+    const ::DenseMatrix<double>& CE, const ::Vector<double>& ce0,  
+    const ::DenseMatrix<double>& CI, const ::Vector<double>& ci0, 
     ::Vector<double>& x)
 {
     Matrix<double> _G(G);

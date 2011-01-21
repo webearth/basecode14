@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 OpenGL implementation of BaseTexture.  See BaseTexture.h for a definiton of the base functions.
 */
+#pragma  once
 
 #ifdef USE_OPENGL
 

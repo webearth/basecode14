@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Generic texture class that maps to either a DirectX or OpenGL texture based upon what the current window is using.
 */
+#pragma  once
 
 class GenericTexture
 {

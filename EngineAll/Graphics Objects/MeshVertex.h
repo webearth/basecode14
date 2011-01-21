@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 MeshVertex Represents a single vertex in a mesh structure.
 */
+#pragma  once
 
 struct MeshVertex
 {
