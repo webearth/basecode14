@@ -9,6 +9,7 @@ A mutex is an object that grants a thread exclusive access to a given section of
 // Note: CRITICAL_SECTION stores a ref count each time EnterCriticalSection is called,
 // and LeaveCriticalSection must be called once for each EnterCriticalSection.
 //
+#pragma  once
 
 struct Mutex
 {

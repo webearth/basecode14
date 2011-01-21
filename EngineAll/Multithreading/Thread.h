@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 A thread is a single unit of code execution
 */
+#pragma  once
 
 struct Thread
 {

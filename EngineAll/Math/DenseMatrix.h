@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 a dense matrix structure.
 */
-
+#pragma once
 
 template<class T> class SparseMatrix;
 

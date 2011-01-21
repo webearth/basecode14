@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 A thread is a single unit of code execution
 */
+#include "..\\..\\Main.h"
+#include "Thread.h"
 
 Thread::Thread()
 {
