@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 A pipe is a connection between two programs, possibly on different computers.
 */
+#pragma  once
 
 class Pipe
 {

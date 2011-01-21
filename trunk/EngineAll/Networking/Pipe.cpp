@@ -4,7 +4,8 @@ Written by Matthew Fisher
 
 A pipe is a connection between two programs, possibly on different computers.
 */
-
+#include "..\\..\\Main.h"
+#include "Pipe.h"
 #include <aclapi.h>
 
 Pipe::Pipe()
