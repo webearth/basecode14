@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 AudioDevice plays wave files.
 */
+#pragma once
 
 #ifdef USE_DIRECTX_AUDIO
 #include <xaudio2.h>

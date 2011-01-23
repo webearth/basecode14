@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Abstract interface for ray-triangle mesh intersections.
 */
+#pragma once
 
 class RayIntersector
 {

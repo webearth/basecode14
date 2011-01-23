@@ -5,6 +5,8 @@ Certain parts are borrowed from the NeHe tutorials, http://nehe.gamedev.net/
 
 an OpenGL instance of GraphicsDevice.  Contains no new functionality over GraphicsDevice.
 */
+#include "..\\..\\Main.h"
+#include "OpenGLGraphicsDevice.h"
 
 #ifdef USE_OPENGL
 

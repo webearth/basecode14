@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 D3D9VertexShader wraps the IDirect3DVertexShader9 object and an associated ID3DXConstantTable.
 */
+#include "..\\..\\Main.h"
+#include "D3D9VertexShader.h"
 
 #ifdef USE_D3D9
 

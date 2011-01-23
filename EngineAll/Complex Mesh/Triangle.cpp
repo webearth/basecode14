@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 ComplexMesh is a complex (edge-based) mesh structure.  Triangle represents a triangle in a ComplexMesh.
 */
+#include "..\\..\\Main.h"
+#include "Triangle.h"
 
 HalfEdge& Triangle::GetHalfEdge(const FullEdge &FullE) const
 {

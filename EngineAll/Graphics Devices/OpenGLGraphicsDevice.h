@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 an OpenGL instance of GraphicsDevice.  Contains no new functionality over GraphicsDevice.
 */
+#pragma once
 
 #ifdef USE_OPENGL
 

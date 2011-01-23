@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Implementation of UnicodeString class.
 */
+#include "..\\..\\Main.h"
+#include "UnicodeString.h"
 
 void UnicodeString::ResizeToCStringLength()
 {

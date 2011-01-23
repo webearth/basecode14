@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Clipper is used to take an arbitrary polygon and clip it against the viewing frustrum.
 */
+#pragma once
 
 class Clipper {
 public:

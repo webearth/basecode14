@@ -8,7 +8,7 @@ cross product of these two, which would be the vector pointing to the left of th
 Although this could use quaternions, it is easier to keep everything as the 4 vectors
 (eye, look, up, left) described above.
 */
-
+#pragma once
 class Camera
 {
 public:

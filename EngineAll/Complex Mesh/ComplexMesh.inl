@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 Inline file for complex-mesh related objects.
 */
-
+#pragma once
 //
 // Triangle inline functions
 //

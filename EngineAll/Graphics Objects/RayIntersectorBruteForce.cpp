@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Brute force implementation of RayIntersector.
 */
+#include "..\\..\\Main.h"
+#include "RayIntersectorBruteForce.h"
 
 void RayIntersectorBruteForce::Init(const Vector<const BaseMesh*> &Meshes)
 {

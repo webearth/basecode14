@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 GUIBUtton is a clickable button GUIElement.
 */
+#include "..\\..\\Main.h"
+#include "GUIButton.h"
 
 void GUIButton::MouseDown(const Vec2f &MousePos, GUIController &Parent)
 {

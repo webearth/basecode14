@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Viewport represents a rectangle on the screen used for rendering
 */
+#pragma once
 
 struct Viewport
 {

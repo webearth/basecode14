@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 Forward declarations for classes/structures
 */
-
+#pragma once
 //Graphics objects
 struct RGBColor;
 class PointSet;

@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Geometric algorithms that do not fit anywhere else.
 */
+#pragma once
 
 namespace GeometryAlgorithms
 {

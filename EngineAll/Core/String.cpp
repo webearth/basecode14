@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Implementation of String class.
 */
+#include "..\\..\\Main.h"
+#include "String.h"
 
 String::String(const UnicodeString &S)
 {

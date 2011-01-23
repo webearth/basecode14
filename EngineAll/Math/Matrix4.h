@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 a 4x4 transformation matrix structure.
 */
+#pragma  once
 
 class Matrix4
 {

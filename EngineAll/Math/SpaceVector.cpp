@@ -2,6 +2,8 @@
 SpaceVector.cpp
 Written by Matthew Fisher
 */
+#include "..\\..\\Main.h"
+#include "SpaceVector.h"
 
 const Vec2i Vec2i::Origin(0, 0);
 

@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D9Font wraps the ID3DXFont object.
 */
+#pragma once
 
 #ifdef USE_D3D9
 

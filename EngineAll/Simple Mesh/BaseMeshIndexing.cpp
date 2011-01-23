@@ -11,6 +11,7 @@ Because there are so many associated functions, they are grouped into various fi
 BaseMeshIndexing.cpp contains the WeldVertices, UnIndex, and TwoPatch functions.
 */
 #include "..\\..\\Main.h"
+#include "BaseMesh.h"
 
 //MeshTwoPatchEdge stores the index of the two vertices that define an edge
 struct MeshTwoPatchEdge {

@@ -6,6 +6,8 @@ The D3D9ProtectRenderTarget class is used to simplify preserving a device's curr
 so new ones can easily be overlayed, and then the original render target and depth buffer restored.
 D3D9RenderTargetTexture is a texture that can be used as a render target.  It has its own associated depth buffer.
 */
+#include "..\\..\\Main.h"
+#include "D3D9RenderTargetTexture.h"
 
 #ifdef USE_D3D9
 

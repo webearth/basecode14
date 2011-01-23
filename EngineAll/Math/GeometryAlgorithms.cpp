@@ -2,6 +2,8 @@
 GeometryAlgorithms.cpp
 Written by Matthew Fisher
 */
+#include "..\\..\\Main.h"
+#include "GeometryAlgorithms.h"
 
 void GeometryAlgorithms::ComputeRigidCorrespondenceTransform(Matrix4 &SourceToTargetTransform, const Vector<RigidCorrespondenceEntry> &Correspondences)
 {

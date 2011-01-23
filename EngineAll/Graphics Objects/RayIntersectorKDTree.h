@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 KD-tree implementation of RayIntersector.
 */
-
+#pragma once
 class RayIntersectorKDTree;
 struct RayIntersectorKDTreeNode
 {

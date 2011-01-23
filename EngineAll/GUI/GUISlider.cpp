@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 GUISlider is a draggable slider GUIElement.
 */
+#include "..\\..\\Main.h"
+#include "GUISlider.h"
 
 float GUISlider::GetFloatValue()
 {

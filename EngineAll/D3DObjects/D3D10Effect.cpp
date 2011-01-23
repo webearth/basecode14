@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 The D3D10Effect class is a wrapper around ID3D10Effect.
 */
+#include "..\\..\\Main.h"
+#include "D3D10Effect.h"
 
 #ifdef USE_D3D10
 

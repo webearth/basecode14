@@ -89,7 +89,7 @@ __forceinline float Vec2f::LengthSq() const
 
 __forceinline Vec2i Vec2f::RoundToVec2i() const
 {
-    return Vec2i(Math::Round(x), Math::Round(y));
+  return Vec2i(Math::Round(x), Math::Round(y));
 }
 
 __forceinline Vec2f Vec2f::Normalize(const Vec2f &V)

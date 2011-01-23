@@ -4,6 +4,9 @@ Written by Matthew Fisher
 
 GUIController handles dispatching window events and rendering a set of GUIElement objects.
 */
+#include "..\\..\\Main.h"
+#include "GUIController.h"
+
 
 void GUIController::Frame(InputManager &Input)
 {

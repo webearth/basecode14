@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Point set is informationa about a collection of points and possibly normal information.
 */
+#include "..\\..\\Main.h"
+#include "PointSet.h"
 
 PointSet::PointSet()
 {

@@ -11,7 +11,7 @@ Because there are so many associated functions, they are grouped into various fi
 BaseMeshSplitting.cpp contains all the Split and PerfectSplit functions.
 */
 #include "..\\..\\Main.h"
-#include "..\\Graphics Objects\\MeshVertex.h"
+#include "BaseMesh.h"
 
 struct SplitVMapper {
     unsigned char Side;

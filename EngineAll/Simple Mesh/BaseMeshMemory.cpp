@@ -11,6 +11,7 @@ Because there are so many associated functions, they are grouped into various fi
 BaseMeshMemory.cpp contains functions surrounding memory management and AppendVertices
 */
 #include "..\\..\\Main.h"
+#include "BaseMesh.h"
 
 BaseMesh::BaseMesh()
 {

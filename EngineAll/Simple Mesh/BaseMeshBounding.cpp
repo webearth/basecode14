@@ -11,7 +11,7 @@ Because there are so many associated functions, they are grouped into various fi
 BaseMeshBounding.cpp contains functions about bounding and determining the size of the mesh.
 */
 #include "..\\..\\Main.h"
-
+#include "BaseMesh.h"
 Rectangle3f BaseMesh::BoundingBox() const
 {
     UINT VC = VertexCount();

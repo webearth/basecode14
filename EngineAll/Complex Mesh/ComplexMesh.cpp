@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 ComplexMesh is a complex (edge-based) mesh structure.
 */
+#include "..\\..\\Main.h"
+#include "ComplexMesh.h"
 
 HalfEdge HalfEdge::Invalid;
 FullEdge FullEdge::Invalid;

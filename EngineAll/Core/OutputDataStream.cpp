@@ -2,6 +2,8 @@
 OutputDataStream.cpp
 Written by Matthew Fisher
 */
+#include "..\\..\\Main.h"
+#include "OutputDataStream.h"
 
 OutputDataStream::OutputDataStream()
 {

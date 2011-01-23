@@ -5,7 +5,7 @@ Written by Matthew Fisher
 a software instance of GraphicsDevice.  Contains no new functionality over GraphicsDevice.
 Doesn't support several things, like textures or lighting.
 */
-
+#pragma once
 class SoftwareGraphicsDevice : public GraphicsDevice
 {
 public:

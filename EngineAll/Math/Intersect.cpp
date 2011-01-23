@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Code for computing geometric object intersections.
 */
+#include "..\\..\\Main.h"
+#include "Intersect.h"
 
 bool Math::RayIntersectRectangle(const Ray3D &Ray, const Rectangle3f &Rect)
 {

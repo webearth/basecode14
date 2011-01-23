@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Color space transformations.  Represents colors as 3-vectors.
 */
+#include "..\\..\\Main.h"
+#include "ColorSpaces.h"
 
 UINT MaxChannel(const Vec3f &V)
 {

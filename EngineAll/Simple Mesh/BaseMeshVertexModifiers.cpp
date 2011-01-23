@@ -11,6 +11,7 @@ Because there are so many associated functions, they are grouped into various fi
 BaseMeshVertexModifiers.cpp contains all the vertex coloring, texturing, and transformation functions.
 */
 #include "..\\..\\Main.h"
+#include "BaseMesh.h"
 
 Vec3f BaseMesh::EvaluateBarycentricPos(UINT FaceIndex, float u, float v) const
 {

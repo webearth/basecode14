@@ -6,7 +6,6 @@ String class and related conversions.
 */
 
 #pragma once
-
 //
 // Intellisense for custom types
 //

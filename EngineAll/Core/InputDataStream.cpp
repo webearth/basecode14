@@ -2,6 +2,8 @@
 InputDataStream.cpp
 Written by Matthew Fisher
 */
+#include "..\\..\\Main.h"
+#include "InputDataStream.h"
 
 InputDataStream::InputDataStream()
 {

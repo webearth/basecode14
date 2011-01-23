@@ -77,10 +77,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="DXGI.lib d3d9.lib d3dx9.lib winmm.lib libtaucs.lib blas_win32.lib lapack_win32.lib libatlas.lib libcblas.lib libf77blas.lib liblapack.lib libmetis.lib vcf2c.lib libpng.lib zdll.lib opengl32.lib SDL_image.lib SDL.lib SDLMain.lib"
+				AdditionalDependencies="DXGI.lib d3d9.lib d3dx9.lib winmm.lib libtaucs.lib blas_win32.lib lapack_win32.lib libatlas.lib libcblas.lib libf77blas.lib liblapack.lib libmetis.lib vcf2c.lib libpng15d.lib zdll.lib opengl32.lib SDL_image.lib SDL.lib SDLMain.lib"
 				OutputFile=".\Debug/CoreRenderer.exe"
 				LinkIncremental="0"
 				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="Libs"
 				IgnoreDefaultLibraryNames="LIBCMT"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=".\Debug/CoreRenderer.pdb"

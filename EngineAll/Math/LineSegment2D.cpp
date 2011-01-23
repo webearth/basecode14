@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 a 2D line segment represented by an origin point and a direction vector.
 */
+#include "..\\..\\Main.h"
+#include "LineSegment2D.h"
 
 void LineSegment2D::Expand(float Dist)
 {

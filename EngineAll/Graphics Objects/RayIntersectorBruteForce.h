@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Brute force implementation of RayIntersector.
 */
+#pragma once
 
 class RayIntersectorBruteForce : public RayIntersector
 {
