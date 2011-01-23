@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Basic definition of some key codes.
 */
+#pragma once
 
 #define KEY_MOUSE             200
 #define KEY_MOUSERIGHT        201

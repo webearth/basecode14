@@ -4,6 +4,8 @@ Part of the Microsoft DirectX SDK
 
 WaveFileReader is needed to load wave files from disk.
 */
+#include "..\\..\\Main.h"
+#include "WaveFileReader.h"
 
 #define SAFE_DELETE(p)       { if (p) { delete (p);     (p)=NULL; } }
 #define SAFE_DELETE_ARRAY(p) { if (p) { delete[] (p);   (p)=NULL; } }

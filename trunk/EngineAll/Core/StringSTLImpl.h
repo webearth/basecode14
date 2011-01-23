@@ -7,23 +7,23 @@ String class and related conversions.
 
 #pragma once
 
-class String
+class StringSTLImpl
 {
 public:
     struct LexicographicComparison
     {
-        bool operator()(const String &L, const String &R) const
+        bool operator()(const StringSTLImpl &L, const StringSTLImpl &R) const
         {
             return strcmp(L.CString(), R.CString()) < 0;
         }
     };
 
-    String()
+    StringSTLImpl()
     {
         FreeMemory();
     }
 
-    ~String()
+    ~StringSTLImpl()
     {
         
     }
@@ -31,52 +31,52 @@ public:
     //
     // All constructors are made explicit to avoid undesired auto-casting.
     //
-    String(const String &S)
+    StringSTLImpl(const StringSTLImpl &S)
     {
         FreeMemory();
         *this = S;
     }
-    explicit String(UINT Value)
+    explicit StringSTLImpl(UINT Value)
     {
         FreeMemory();
         *this = Value;
     }
-    explicit String(UINT64 Value)
+    explicit StringSTLImpl(UINT64 Value)
     {
         FreeMemory();
         *this = Value;
     }
-    explicit String(DWORD Value)
+    explicit StringSTLImpl(DWORD Value)
     {
         FreeMemory();
         *this = int(Value);
     }
-    explicit String(int Value)
+    explicit StringSTLImpl(int Value)
     {
         FreeMemory();
         *this = Value;
     }
-    explicit String(float Value)
+    explicit StringSTLImpl(float Value)
     {
         FreeMemory();
         *this = Value;
     }
-    explicit String(double Value)
+    explicit StringSTLImpl(double Value)
     {
         FreeMemory();
         *this = float(Value);
     }
-    String(const char *Text)
+    StringSTLImpl(const char *Text)
     {
         FreeMemory();
         *this = Text;
     }
-    explicit String(char Character)
+    explicit StringSTLImpl(char Character)
     {
         FreeMemory();
         *this = Character;
     }
-    explicit String(bool B)
+    explicit StringSTLImpl(bool B)
     {
         FreeMemory();
         if(B)
@@ -180,38 +180,38 @@ public:
     //
     // Query
     //
-    bool ExactMatchAtOffset(const String &Find, UINT Offset) const;
-    bool Contains(const String &Find) const;
+    bool ExactMatchAtOffset(const StringSTLImpl &Find, UINT Offset) const;
+    bool Contains(const StringSTLImpl &Find) const;
     bool IsNumeric() const;
-    bool IsSuffix(const String &EndCanidate) const;
-    bool IsPrefix(const String &StartCanidate) const;
-    void Partition(char Seperator, Vector<String> &Output) const;
-    Vector<String> Partition(char Seperator) const;
-    void PartitionAboutIndex(UINT Index, String &Left, String &Right) const;
-    void Partition(const String &Seperator, Vector<String> &Output) const;
+    bool IsSuffix(const StringSTLImpl &EndCanidate) const;
+    bool IsPrefix(const StringSTLImpl &StartCanidate) const;
+    void Partition(char Seperator, Vector<StringSTLImpl> &Output) const;
+    Vector<StringSTLImpl> Partition(char Seperator) const;
+    void PartitionAboutIndex(UINT Index, StringSTLImpl &Left, StringSTLImpl &Right) const;
+    void Partition(const StringSTLImpl &Seperator, Vector<StringSTLImpl> &Output) const;
     int FindFirstIndex(char Seperator) const;
     int FindLastIndex(char Seperator) const;
-    String FindAndReplace(const String &Find, const String &Replace) const;
-    String MakeLowercase() const;
-    String RemoveSuffix(const String &EndCandidate) const;
+    StringSTLImpl FindAndReplace(const StringSTLImpl &Find, const StringSTLImpl &Replace) const;
+    StringSTLImpl MakeLowercase() const;
+    StringSTLImpl RemoveSuffix(const StringSTLImpl &EndCandidate) const;
     UINT Hash() const;
     
     //
     // Assignment
     //
-    String& operator = (const char *String);
-    String& operator = (char Character);
-    String& operator = (float Value);
-    String& operator = (int Value);
-    String& operator = (UINT Value);
-    String& operator = (UINT64 Value);
-    String& operator = (const String &S);
+    StringSTLImpl& operator = (const char *StringSTLImpl);
+    StringSTLImpl& operator = (char Character);
+    StringSTLImpl& operator = (float Value);
+    StringSTLImpl& operator = (int Value);
+    StringSTLImpl& operator = (UINT Value);
+    StringSTLImpl& operator = (UINT64 Value);
+    StringSTLImpl& operator = (const StringSTLImpl &S);
 
     //
     // Modifiers
     //
-    String& operator += (const String &S);
-    __forceinline String& operator += (char C)
+    StringSTLImpl& operator += (const StringSTLImpl &S);
+    __forceinline StringSTLImpl& operator += (char C)
     {
         PushEnd(C);
         return *this;
@@ -237,8 +237,8 @@ public:
     //
     // Formatting
     //
-    static String UnsignedIntAsHex(UINT Value);
-    static String ZeroPad(const String &S, UINT ZeroPadding);
+    static StringSTLImpl UnsignedIntAsHex(UINT Value);
+    static StringSTLImpl ZeroPad(const StringSTLImpl &S, UINT ZeroPadding);
 
 private:
     void ResizeToCStringLength();
@@ -249,18 +249,18 @@ private:
 //
 // String Comparison
 //
-bool operator == (const String &L, const String &R);
-bool operator == (const char *L, const String &R);
-bool operator == (const String &R, const char *L);
-__forceinline bool operator != (const String &L, const String &R) {return !(L == R);}
-__forceinline bool operator != (const char *L, const String &R) {return !(L == R);}
-__forceinline bool operator != (const String &R, const char *L) {return !(L == R);}
+bool operator == (const StringSTLImpl &L, const StringSTLImpl &R);
+bool operator == (const char *L, const StringSTLImpl &R);
+bool operator == (const StringSTLImpl &R, const char *L);
+__forceinline bool operator != (const StringSTLImpl &L, const StringSTLImpl &R) {return !(L == R);}
+__forceinline bool operator != (const char *L, const StringSTLImpl &R) {return !(L == R);}
+__forceinline bool operator != (const StringSTLImpl &R, const char *L) {return !(L == R);}
 
 //
 // String Operations
 //
-String operator + (const String &L, const String &R);
-String operator + (const char *L, const String &R);
-String operator + (const String &R, const char *L);
-ostream& operator << (ostream &os, const String &S);
+StringSTLImpl operator + (const StringSTLImpl &L, const StringSTLImpl &R);
+StringSTLImpl operator + (const char *L, const StringSTLImpl &R);
+StringSTLImpl operator + (const StringSTLImpl &R, const char *L);
+ostream& operator << (ostream &os, const StringSTLImpl &S);
 

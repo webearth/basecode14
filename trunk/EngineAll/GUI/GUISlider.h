@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 GUISlider is a draggable slider GUIElement.
 */
-
+#pragma  once
 class GUISlider : public GUIElement
 {
 public:

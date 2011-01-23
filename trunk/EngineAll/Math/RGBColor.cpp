@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Generic 32-bit RGBA triplet structure.  Rather self-explanitory.
 */
+#include "..\\..\\Main.h"
+#include "RGBColor.h"
 
 const RGBColor RGBColor::White(255, 255, 255);
 const RGBColor RGBColor::Gray(128, 128, 128);

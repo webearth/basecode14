@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D9RenderTargetSurface is a surface that can be used as a render target.
 */
+#pragma once
 
 #ifdef USE_D3D9
 class D3D9RenderTargetSurface : public D3D9Object

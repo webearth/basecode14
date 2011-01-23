@@ -5,6 +5,8 @@ Written by Matthew Fisher
 Collection of very useful functions/macros/constants.
 See Stdhdr.h for a more thorough definition/explination of all constants/functions defined here.
 */
+#include "..\\..\\Main.h"
+#include "Stdhdr.h"
 
 namespace Utility
 {

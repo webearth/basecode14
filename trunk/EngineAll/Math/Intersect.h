@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 Code for computing geometric object intersections.
 */
-
+#pragma once
 namespace Math
 {
     bool RayIntersectRectangle(const Ray3D &Ray, const Rectangle3f &Rect);

@@ -5,6 +5,8 @@ Written by Matthew Fisher
 A standard 3D plane (space plane.)  Essentially just the surface defined by a*x + b*y + c*z + d = 0
 See Plane.h for a description of these functions.
 */
+#include "..\\..\\Main.h"
+#include "Plane.h"
 
 Plane::Plane()
 {

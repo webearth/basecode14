@@ -2,7 +2,7 @@
 KMeansClustering.h
 Written by Matthew Fisher
 */
-
+#pragma once
 class Vec3fKMeansMetric
 {
 public:

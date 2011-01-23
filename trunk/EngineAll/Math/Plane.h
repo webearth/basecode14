@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 A standard 3D plane (space plane;) i. e. the surface defined by a*x + b*y + c*z + d = 0
 */
-
+#pragma  once
 struct Plane
 {
     //

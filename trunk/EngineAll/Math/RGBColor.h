@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Generic 32-bit RGBA triplet structure.  Rather self-explanitory
 */
+#pragma  once
 
 struct RGBColor
 {

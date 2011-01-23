@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 ComplexMesh is a complex (edge-based) mesh structure.  Vertex represents a vertex in a ComplexMesh.
 */
+#include "..\\..\\Main.h"
+#include "Vertex.h"
 
 void Vertex::LoadVertices()
 {

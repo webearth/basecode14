@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 A simple ZBuffer structure, for software rendering.  Stores the depth of each screen pixel.
 */
-
+#pragma once
 class ZBuffer {
 public:
     ZBuffer();

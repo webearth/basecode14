@@ -5,8 +5,9 @@ Written by Matthew Fisher
 MeshVertex Represents a single vertex in a mesh structure.
 */
 #include "..\\..\\Main.h"
+#include "MeshVertex.h"
 
-void Interpolate(const MeshVertex &sv, const MeshVertex &ev, MeshVertex &out, float s)
+void MeshVertex::Interpolate(const MeshVertex &sv, const MeshVertex &ev, MeshVertex &out, float s)
 {
     int i;
     unsigned char *color1,*color2,*color;

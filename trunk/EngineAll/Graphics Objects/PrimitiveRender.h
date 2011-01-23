@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 Rendering functions for lines and polygons in software.  Not very efficent.
 */
-
+#pragma once
 class PrimitiveRender
 {
 public:

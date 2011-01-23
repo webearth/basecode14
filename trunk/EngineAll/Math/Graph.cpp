@@ -1,3 +1,6 @@
+#include "..\\..\\Main.h"
+#include "Graph.h"
+
 Graph::Graph()
 {
 

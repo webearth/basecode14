@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D9Object is an abstract class used for all resetable D3D9 graphics objects
 */
+#pragma once
 
 #ifdef USE_D3D9
 

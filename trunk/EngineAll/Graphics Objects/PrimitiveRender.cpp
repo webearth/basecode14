@@ -6,6 +6,8 @@ Rendering functions for lines and polygons in software.  Not very efficent.
 DrawLine uses integer arithmetic but DrawPolygon doesn't.  I decide not to comment
 these because I intend to rewrite them, but they work good enough under most conditions.
 */
+#include "..\\..\\Main.h"
+#include "PrimitiveRender.h"
 
 void PrimitiveRender::DrawSquare(Bitmap &Bmp, const Vec2i &Coords, int Radius, RGBColor InteriorColor, RGBColor BorderColor)
 {

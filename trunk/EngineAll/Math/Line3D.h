@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 A standard 3D line.
 */
-
+#pragma once
 struct Line3D
 {
     Line3D() {}

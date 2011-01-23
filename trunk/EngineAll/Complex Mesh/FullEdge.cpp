@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 ComplexMesh is a complex (edge-based) mesh structure.  FullEdge represents an edge in a ComplexMesh.
 */
+#include "..\\..\\Main.h"
+#include "FullEdge.h"
 
 HalfEdge::HalfEdge()
 {

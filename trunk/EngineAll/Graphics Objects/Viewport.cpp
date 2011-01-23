@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Viewport represents a rectangle on the screen used for rendering
 */
+#include "..\\..\\Main.h"
+#include "Viewport.h"
 
 Viewport::Viewport()
 {

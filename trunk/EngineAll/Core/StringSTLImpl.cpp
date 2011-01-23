@@ -2,21 +2,23 @@
 String.cpp
 Written by Matthew Fisher
 
-Implementation of String class.
+Implementation of StringSTLImpl class.
 */
+#include "..\\..\\Main.h"
+#include "StringSTLImpl.h"
 
-String String::UnsignedIntAsHex(UINT Value)
+StringSTLImpl StringSTLImpl::UnsignedIntAsHex(UINT Value)
 {
-    String S;
+    StringSTLImpl S;
     S.ReSize(20);
     sprintf(S.CString(), "%x", Value);
     S.ResizeToCStringLength();
     return S;
 }
 
-String String::ZeroPad(const String &S, UINT ZeroPadding)
+StringSTLImpl StringSTLImpl::ZeroPad(const StringSTLImpl &S, UINT ZeroPadding)
 {
-    String Prefix;
+    StringSTLImpl Prefix;
     for(UINT i = S.Length(); i < ZeroPadding; i++)
     {
         Prefix.PushEnd('0');
@@ -24,7 +26,7 @@ String String::ZeroPad(const String &S, UINT ZeroPadding)
     return Prefix + S;
 }
 
-bool String::ConvertToBoolean() const
+bool StringSTLImpl::ConvertToBoolean() const
 {
     if(*this == "true")
     {
@@ -34,11 +36,11 @@ bool String::ConvertToBoolean() const
     {
         return false;
     }
-    SignalError("Invalid string -> boolean conversion");
+    SignalError("Invalid StringSTLImpl -> boolean conversion");
     return false;
 }
 
-void String::ResizeToCStringLength()
+void StringSTLImpl::ResizeToCStringLength()
 {
     for(UINT i = 0; i < _Data.Length(); i++)
     {
@@ -48,10 +50,10 @@ void String::ResizeToCStringLength()
             return;
         }
     }
-    SignalError("No null terminator found in String::ResizeToCStringLength");
+    SignalError("No null terminator found in StringSTLImpl::ResizeToCStringLength");
 }
 
-String& String::operator = (float Value)
+StringSTLImpl& StringSTLImpl::operator = (float Value)
 {
     ostringstream S(ostringstream::out);
     S << Value;
@@ -59,7 +61,7 @@ String& String::operator = (float Value)
     return *this;
 }
 
-String& String::operator = (char Character)
+StringSTLImpl& StringSTLImpl::operator = (char Character)
 {
     _Data.ReSize(2);
     _Data[0] = Character;
@@ -67,7 +69,7 @@ String& String::operator = (char Character)
     return *this;
 }
 
-String& String::operator = (int Value)
+StringSTLImpl& StringSTLImpl::operator = (int Value)
 {
     ostringstream S(ostringstream::out);
     S << Value;
@@ -75,7 +77,7 @@ String& String::operator = (int Value)
     return *this;
 }
 
-String& String::operator = (UINT Value)
+StringSTLImpl& StringSTLImpl::operator = (UINT Value)
 {
     ostringstream S(ostringstream::out);
     S << Value;
@@ -83,7 +85,7 @@ String& String::operator = (UINT Value)
     return *this;
 }
 
-String& String::operator = (UINT64 Value)
+StringSTLImpl& StringSTLImpl::operator = (UINT64 Value)
 {
     ostringstream S(ostringstream::out);
     S << Value;
@@ -91,7 +93,7 @@ String& String::operator = (UINT64 Value)
     return *this;
 }
 
-String& String::operator = (const char *String)
+StringSTLImpl& StringSTLImpl::operator = (const char *String)
 {
     UINT NewLength = UINT(strlen(String)) + 1;
     _Data.ReSize(NewLength);
@@ -99,13 +101,13 @@ String& String::operator = (const char *String)
     return *this;
 }
 
-String& String::operator = (const String &S)
+StringSTLImpl& StringSTLImpl::operator = (const StringSTLImpl &S)
 {
     _Data = S._Data;
     return *this;
 }
 
-String& String::operator += (const String &S)
+StringSTLImpl& StringSTLImpl::operator += (const StringSTLImpl &S)
 {
     UINT BaseLength = Length();
     _Data.ReSize(BaseLength + S.Length() + 1);
@@ -117,9 +119,9 @@ String& String::operator += (const String &S)
     return *this;
 }
 
-String String::MakeLowercase() const
+StringSTLImpl StringSTLImpl::MakeLowercase() const
 {
-    String Result = *this;
+    StringSTLImpl Result = *this;
     for(UINT i = 0; i < Result.Length(); i++)
     {
         Result[i] = tolower(Result[i]);
@@ -127,10 +129,10 @@ String String::MakeLowercase() const
     return Result;
 }
 
-void String::Partition(char Seperator, Vector<String> &Output) const
+void StringSTLImpl::Partition(char Seperator, Vector<StringSTLImpl> &Output) const
 {
     Output.FreeMemory();
-    String CurEntry;
+    StringSTLImpl CurEntry;
     for(UINT CurIndex = 0; CurIndex < Length(); CurIndex++)
     {
         if((*this)[CurIndex] == Seperator)
@@ -152,14 +154,14 @@ void String::Partition(char Seperator, Vector<String> &Output) const
     }
 }
 
-Vector<String> String::Partition(char Seperator) const
+Vector<StringSTLImpl> StringSTLImpl::Partition(char Seperator) const
 {
-    Vector<String> Result;
+    Vector<StringSTLImpl> Result;
     Partition(Seperator, Result);
     return Result;
 }
 
-int String::FindFirstIndex(char Seperator) const
+int StringSTLImpl::FindFirstIndex(char Seperator) const
 {
     UINT L = Length();
     for(UINT CurIndex = 0; CurIndex < L; CurIndex++)
@@ -172,7 +174,7 @@ int String::FindFirstIndex(char Seperator) const
     return -1;
 }
 
-int String::FindLastIndex(char Seperator) const
+int StringSTLImpl::FindLastIndex(char Seperator) const
 {
     UINT L = Length();
     for(int CurIndex = L - 1; CurIndex >= 0; CurIndex--)
@@ -185,10 +187,10 @@ int String::FindLastIndex(char Seperator) const
     return -1;
 }
 
-void String::PartitionAboutIndex(UINT Index, String &Left, String &Right) const
+void StringSTLImpl::PartitionAboutIndex(UINT Index, StringSTLImpl &Left, StringSTLImpl &Right) const
 {
     UINT L = Length();
-    Assert(Index < L, "Index invalid in String::PartitionAboutIndex");
+    Assert(Index < L, "Index invalid in StringSTLImpl::PartitionAboutIndex");
     Left.ReSize(Index);
     Right.ReSize(L - Index - 1);
     for(UINT LeftIndex = 0; LeftIndex < Index; LeftIndex++)
@@ -201,11 +203,11 @@ void String::PartitionAboutIndex(UINT Index, String &Left, String &Right) const
     }
 }
 
-void String::Partition(const String &Seperator, Vector<String> &Output) const
+void StringSTLImpl::Partition(const StringSTLImpl &Seperator, Vector<StringSTLImpl> &Output) const
 {
     Assert(Seperator.Length() >= 1, "empty seperator");
     Output.FreeMemory();
-    String CurEntry;
+    StringSTLImpl CurEntry;
     for(UINT CurIndex = 0; CurIndex < Length(); CurIndex++)
     {
         bool IsSeperator = true;
@@ -237,7 +239,7 @@ void String::Partition(const String &Seperator, Vector<String> &Output) const
     }
 }
 
-bool String::ExactMatchAtOffset(const String &Find, UINT Offset) const
+bool StringSTLImpl::ExactMatchAtOffset(const StringSTLImpl &Find, UINT Offset) const
 {
     UINT MatchLength = 0;
     for(UINT Index = 0; Index + Offset < Length() && Index < Find.Length(); Index++)
@@ -254,7 +256,7 @@ bool String::ExactMatchAtOffset(const String &Find, UINT Offset) const
     return false;
 }
 
-bool String::Contains(const String &Find) const
+bool StringSTLImpl::Contains(const StringSTLImpl &Find) const
 {
     for(UINT Index = 0; Index < Length(); Index++)
     {
@@ -266,9 +268,9 @@ bool String::Contains(const String &Find) const
     return false;
 }
 
-String String::FindAndReplace(const String &Find, const String &Replace) const
+StringSTLImpl StringSTLImpl::FindAndReplace(const StringSTLImpl &Find, const StringSTLImpl &Replace) const
 {
-    String Result;
+    StringSTLImpl Result;
     for(UINT Index = 0; Index < Length(); Index++)
     {
         if(ExactMatchAtOffset(Find, Index))
@@ -284,7 +286,7 @@ String String::FindAndReplace(const String &Find, const String &Replace) const
     return Result;
 }
 
-bool String::IsNumeric() const
+bool StringSTLImpl::IsNumeric() const
 {
     return (Length() > 0 &&
            (ConvertToDouble() != 0.0 ||
@@ -293,7 +295,7 @@ bool String::IsNumeric() const
             _Data[0] == '-'));
 }
 
-bool String::IsSuffix(const String &EndCanidate) const
+bool StringSTLImpl::IsSuffix(const StringSTLImpl &EndCanidate) const
 {
     if(Length() < EndCanidate.Length())
     {
@@ -309,10 +311,10 @@ bool String::IsSuffix(const String &EndCanidate) const
     return true;
 }
 
-String String::RemoveSuffix(const String &EndCandidate) const
+StringSTLImpl StringSTLImpl::RemoveSuffix(const StringSTLImpl &EndCandidate) const
 {
     Assert(IsSuffix(EndCandidate), "Removing invalid suffix");
-    String Result = *this;
+    StringSTLImpl Result = *this;
     for(UINT i = 0; i < EndCandidate.Length(); i++)
     {
         Result.PopEnd();
@@ -320,7 +322,7 @@ String String::RemoveSuffix(const String &EndCandidate) const
     return Result;
 }
 
-bool String::IsPrefix(const String &StartCanidate) const
+bool StringSTLImpl::IsPrefix(const StringSTLImpl &StartCanidate) const
 {
     if(Length() < StartCanidate.Length())
     {
@@ -336,7 +338,7 @@ bool String::IsPrefix(const String &StartCanidate) const
     return true;
 }
 
-UINT String::Hash() const
+UINT StringSTLImpl::Hash() const
 {
     return Utility::Hash32((const BYTE *)_Data.CArray(), _Data.Length());
 }
@@ -345,9 +347,9 @@ UINT String::Hash() const
 // Overloaded operators
 //
 
-String operator + (const String &L, const String &R)
+StringSTLImpl operator + (const StringSTLImpl &L, const StringSTLImpl &R)
 {
-    String Ret = L;
+    StringSTLImpl Ret = L;
     for(UINT i = 0; i < R.Length(); i++)
     {
         Ret.PushEnd(R[i]);
@@ -355,9 +357,9 @@ String operator + (const String &L, const String &R)
     return Ret;
 }
 
-String operator + (const char *L, const String &R)
+StringSTLImpl operator + (const char *L, const StringSTLImpl &R)
 {
-    String Ret = L;
+    StringSTLImpl Ret = L;
     for(UINT i = 0; i < R.Length(); i++)
     {
         Ret.PushEnd(R[i]);
@@ -365,10 +367,10 @@ String operator + (const char *L, const String &R)
     return Ret;
 }
 
-String operator + (const String &L, const char *R)
+StringSTLImpl operator + (const StringSTLImpl &L, const char *R)
 {
     UINT RLen = UINT(strlen(R));
-    String Ret = L;
+    StringSTLImpl Ret = L;
     for(UINT i = 0; i < RLen; i++)
     {
         Ret.PushEnd(R[i]);
@@ -376,7 +378,7 @@ String operator + (const String &L, const char *R)
     return Ret;
 }
 
-ostream& operator << (ostream &os, const String &S)
+ostream& operator << (ostream &os, const StringSTLImpl &S)
 {
     if(S.Length() > 0)
     {
@@ -385,7 +387,7 @@ ostream& operator << (ostream &os, const String &S)
     return os;
 }
 
-bool operator == (const String &L, const String &R)
+bool operator == (const StringSTLImpl &L, const StringSTLImpl &R)
 {
     UINT LLen = L.Length();
     UINT RLen = R.Length();
@@ -403,7 +405,7 @@ bool operator == (const String &L, const String &R)
     return true;
 }
 
-bool operator == (const char *L, const String &R)
+bool operator == (const char *L, const StringSTLImpl &R)
 {
     UINT LLen = UINT(strlen(L));
     UINT RLen = R.Length();
@@ -421,7 +423,7 @@ bool operator == (const char *L, const String &R)
     return true;
 }
 
-bool operator == (const String &R, const char *L)
+bool operator == (const StringSTLImpl &R, const char *L)
 {
     return (L == R);
 }

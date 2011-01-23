@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 A 3D KD-tree that supports fast points-within-rectangle queries
 */
-
+#pragma once
 #ifdef USE_ANN
 #ifdef USE_KDTREE
 #include "ANN/ANN.h"

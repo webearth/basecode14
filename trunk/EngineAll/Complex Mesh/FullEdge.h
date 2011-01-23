@@ -5,6 +5,7 @@ Written by Matthew Fisher
 ComplexMesh is a complex (edge-based) mesh structure.  FullEdge represents an edge in a ComplexMesh.
 HalfEdge represents one side of an edge (an edge associated with a specific triangle.)
 */
+#pragma once
 
 class FullEdge
 {

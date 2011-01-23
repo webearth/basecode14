@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 ComplexMesh is a complex (edge-based) mesh structure.  Triangle represents a triangle in a ComplexMesh.
 */
+#pragma once
 
 class Triangle
 {

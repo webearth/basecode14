@@ -9,7 +9,7 @@ Each mesh must be associated with a graphics device before most operations can b
 Because there are so many associated functions, the source is further grouped into multiple files.
 */
 #include "..\\..\\Main.h"
-
+#include "BaseMesh.h"
 void BaseMesh::SaveASCII(const String &Filename)
 {
     ofstream file(Filename.CString());

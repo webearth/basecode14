@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 A wave file defines a (possibly stereo) sound.
 */
+#include "..\\..\\Main.h"
+#include "WaveFile.h"
 
 void WaveFile::LoadFromFile(LPWSTR strFileName, WAVEFORMATEX* pwfx, DWORD dwFlags )
 {

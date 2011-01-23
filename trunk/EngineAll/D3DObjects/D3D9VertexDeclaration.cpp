@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 D3D9VertexDeclaration is a wrapper around the D3D9 IDirect3DVertexDeclaration9 object.
 */
+#include "..\\..\\Main.h"
+#include "D3D9VertexDeclaration.h"
 
 #ifdef USE_D3D9
 

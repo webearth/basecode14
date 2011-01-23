@@ -1,3 +1,5 @@
+#pragma once
+
 struct GraphEdge
 {
     __forceinline UINT GetOtherVertex(UINT V0) const

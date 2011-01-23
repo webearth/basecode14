@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 a 4x4 Matrix4 structure.  Used very often for affine vector transformations.
 */
+#include "..\\..\\Main.h"
+#include "Matrix4.h"
 
 Matrix4::Matrix4()
 {

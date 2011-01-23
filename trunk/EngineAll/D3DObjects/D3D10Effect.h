@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 The D3D10Effect class is a wrapper around ID3D10Effect.
 */
+#pragma once
 
 #ifdef USE_D3D10
 

@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 a 2D line segment represented by an origin point and a direction vector.
 */
+#pragma once
 
 struct LineSegment2D
 {

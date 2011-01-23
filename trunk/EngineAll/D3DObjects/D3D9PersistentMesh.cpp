@@ -5,6 +5,8 @@ Written by Matthew Fisher
 D3D9PersistentMesh is a D3D9Mesh that is backed up with a RAM copy, so it can be
 preserved when the device is lost and needs to be reset.
 */
+#include "..\\..\\Main.h"
+#include "D3D9PersistentMesh.h"
 
 #ifdef USE_D3D9
 

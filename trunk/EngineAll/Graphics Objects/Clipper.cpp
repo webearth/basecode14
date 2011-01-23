@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 Clipper is used to take an arbitrary polygon and clip it against the viewing frustrum.
 */
+#include "..\\..\\Main.h"
+#include "Clipper.h"
 
 Clipper::Clipper()
 {
@@ -76,13 +78,13 @@ void Clipper::Clip(MeshVertex *Polygon, int &vc, Plane &P)
             if(Inside[ip1])
             {
                 s = P.IntersectLineRatio(Polygon[i].Pos,Polygon[ip1].Pos);    //compute the intersection with the clipping plane
-                Interpolate(Polygon[i],Polygon[ip1], Vtx1, s);                //create a new vertex at this interpolation value
+                MeshVertex::Interpolate(Polygon[i],Polygon[ip1], Vtx1, s);                //create a new vertex at this interpolation value
                 Break1 = i;            //mark this crossing (from outside to inside)
             }
             else
             {
                 s = P.IntersectLineRatio(Polygon[i].Pos,Polygon[ip1].Pos);    //same as above
-                Interpolate(Polygon[i],Polygon[ip1], Vtx2, s);
+                MeshVertex::Interpolate(Polygon[i],Polygon[ip1], Vtx2, s);
                 Break2 = i;            //mark this crossing (from inside to outside)
             }
         }

@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 A wave file defines a (possibly stereo) sound.
 */
+#pragma once
 
 class WaveFile
 {

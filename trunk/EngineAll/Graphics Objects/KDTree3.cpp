@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 A 3D KD-tree that supports fast points-within-rectangle queries
 */
+#include "..\\..\\Main.h"
+#include "KDTree3.h"
 
 #ifdef USE_ANN
 #ifdef USE_KDTREE

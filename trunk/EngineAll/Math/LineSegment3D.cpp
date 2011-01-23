@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 a 3D line segment represented by an origin point and a direction vector.
 */
+#include "..\\..\\Main.h"
+#include "LineSegment3D.h"
 
 void LineSegment3D::Expand(float Dist)
 {

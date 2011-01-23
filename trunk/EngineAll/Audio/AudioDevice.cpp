@@ -4,6 +4,9 @@ Written by Matthew Fisher
 
 AudioDevice plays wave files.
 */
+#include "..\\..\\Main.h"
+#include "AudioDevice.h"
+
 
 AudioDevice::AudioDevice()
 {

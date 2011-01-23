@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 GUIElement is an abstract class that all GUI elements use.
 */
-
+#pragma once
 class GUIController;
 
 class GUIElement

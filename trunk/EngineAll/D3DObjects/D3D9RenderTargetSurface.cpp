@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 D3D9RenderTargetSurface is a surface that can be used as a render target.
 */
+#include "..\\..\\Main.h"
+#include "D3D9RenderTargetSurface.h"
 
 #ifdef USE_D3D9
 

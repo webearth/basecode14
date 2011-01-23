@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 GUIBUtton is a clickable button GUIElement.
 */
+#pragma once
 
 class GUIButton : public GUIElement
 {

@@ -4,6 +4,7 @@ Part of the Microsoft DirectX SDK
 
 WaveFileReader is needed to load wave files from disk.
 */
+#pragma once
 
 //-----------------------------------------------------------------------------
 // Typing macros 

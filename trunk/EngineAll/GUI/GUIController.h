@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 GUIController handles dispatching window events and rendering a set of GUIElement objects.
 */
-
+#pragma once
 enum GUIEventType
 {
     GUIEventButtonPressed,

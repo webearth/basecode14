@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 D3D9PixelShader wraps the IDirect3DPixelShader9 object and an associated ID3DXConstantTable.
 */
+#pragma once
 
 #ifdef USE_D3D9
 

@@ -5,6 +5,8 @@ Written by Matthew Fisher
 a _D3D instance of GraphicsDevice.  The only new functionality is GetDevice() which returns
 the D3DDevice associated with this graphics device.
 */
+#include "..\\..\\Main.h"
+#include "D3D9GraphicsDevice.h"
 
 #ifdef USE_D3D9
 

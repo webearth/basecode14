@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 A standard 3D line.
 */
+#include "..\\..\\Main.h"
+#include "Line3D.h"
 
 bool Line3D::ClosestPoint(const Line3D &L1, const Line3D &L2, Vec3f &Result1, Vec3f &Result2)
 {

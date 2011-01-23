@@ -5,6 +5,8 @@ Written by Matthew Fisher
 A simple ZBuffer structure, for software rendering.  Stores the depth of each screen pixel.
 See ZBuffer.h for a full description.
 */
+#include "..\\..\\Main.h"
+#include "ZBuffer.h"
 
 ZBuffer::ZBuffer()
 {

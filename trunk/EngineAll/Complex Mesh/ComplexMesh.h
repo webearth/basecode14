@@ -4,7 +4,7 @@ Written by Matthew Fisher
 
 ComplexMesh is a complex (edge-based) mesh structure.
 */
-
+#pragma once
 #include "ComplexMesh.inl"
 
 typedef Vector<UINT> ComplexMeshEdgeHash;    // An element in the hash structure for linking half-edges together

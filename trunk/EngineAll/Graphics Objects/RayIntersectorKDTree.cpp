@@ -4,6 +4,8 @@ Written by Matthew Fisher
 
 KD-tree implementation of RayIntersector.
 */
+#include "..\\..\\Main.h"
+#include "RayIntersectorKDTree.h"
 
 RayIntersectorKDTreeNode::RayIntersectorKDTreeNode(const Vector<UINT> &TriangleIndices, const RayIntersectorKDTree &Root, UINT Depth, Vector<UINT> &LeafTriangles)
 {

@@ -4,6 +4,7 @@ Written by Matthew Fisher
 
 Point set is informationa about a collection of points and possibly normal information.
 */
+#pragma  once
 
 struct SamplePoint
 {

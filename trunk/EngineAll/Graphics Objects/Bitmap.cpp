@@ -6,6 +6,8 @@ A bitmap class (a 2D array of RGBColor's)
 Rather self-explanitory, can only save and load a few primitive formats.
 See Bitmap.h for a complete description
 */
+#include "..\\..\\Main.h"
+#include "Bitmap.h"
 
 Bitmap::Bitmap()
 {
